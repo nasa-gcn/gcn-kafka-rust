@@ -1,7 +1,6 @@
 use gcn_kafka::GcnClientConfig;
-use rdkafka::Message;
 use rdkafka::{
-    ClientConfig,
+    ClientConfig, Message,
     consumer::{Consumer, StreamConsumer},
 };
 use std::env::var;
