@@ -18,13 +18,12 @@ pub async fn main() {
     let consumer: StreamConsumer = config.create().unwrap();
 
     println!("Topics:");
-    for topic in consumer
-        .fetch_metadata(None, Duration::from_secs(1))
+    consumer
+        .fetch_metadata(None, Duration::from_secs(3))
         .unwrap()
         .topics()
-    {
-        println!("{}", topic.name());
-    }
+        .iter()
+        .for_each(|topic| println!("  {}", topic.name()));
 
     consumer.subscribe(&["gcn.heartbeat"]).unwrap();
 
