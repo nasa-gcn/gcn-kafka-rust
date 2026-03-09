@@ -18,4 +18,4 @@ rdkafka = { version = "0.39.0", features = ["ssl", "curl", "zstd"] }
 uuid = { version = "1.20.0", features = ["v4"] }
 
 [dev-dependencies]
-tokio = { version = "1.49.0", features = ["full"] }
+tokio = { version = "1.50.0", features = ["full"] }
