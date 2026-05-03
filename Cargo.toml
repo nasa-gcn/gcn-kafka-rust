@@ -14,7 +14,7 @@ description = "Kafka client for NASA's General Coordinates Network (GCN)"
 categories = ["aerospace", "api-bindings", "science"]
 
 [dependencies]
-rdkafka = { version = "0.39.0", features = ["ssl", "curl", "zstd"] }
+rdkafka = { version = "0.39.0", features = ["ssl", "curl-static", "zstd"] }
 uuid = { version = "1.20.0", features = ["v4"] }
 
 [dev-dependencies]
