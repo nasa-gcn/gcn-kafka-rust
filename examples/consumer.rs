@@ -9,7 +9,7 @@ use std::time::Duration;
 #[tokio::main]
 pub async fn main() {
     let mut config = ClientConfig::new();
-    config.set_gcn_auth(
+    config.set_gcn(
         &var("GCN_KAFKA_CLIENT_ID").expect("env var GCN_KAFKA_CLIENT_ID is not defined"),
         &var("GCN_KAFKA_CLIENT_SECRET").expect("env var GCN_KAFKA_CLIENT_SECRET is not defined"),
         var("GCN_KAFKA_DOMAIN").ok().as_deref(),
